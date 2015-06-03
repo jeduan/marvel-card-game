@@ -4,28 +4,17 @@ section(class="Layout")
         each card in [1,2,3,4,5]
             include ../card/template.jade
     section(class="Layout-main")
-        div(class="Layout-status")
-            - name = "Computer"
-            include ../status/template.jade
-            - name = "Player"
-            include ../status/template.jade
+        div(class="Layout-status") 
+            each name in ["Jeduan", "Leonidas"]
+                include ../status/template.jade
+            
 
         div(class="Layout-battle")
-            div(class="Layout-battleColumn")
-                - clase = ""
-                div(class="Layout-battleRow")
-                    each card in [1,2,3,4,5]
-                        include ../card/template.jade
-                div(class="Layout-battleRow")
-                    each card in [1,2,3,4,5]
-                        include ../card/template.jade
-                
+            include ../battle/template.jade
         div(class="Layout-phases")
-            - text = "Ohhh! que buen ataque, le bajaste 345 puntos"
-            include ../phase/template.jade
-
-
+            - text = "OMG ese ataque fue muy fuerte, le quitaste 300 puntos."
+            include ../phases/template.jade
     section(class="Layout-player")
-        - clase = "Card--player"
         each card in [1,2,3,4,5]
+            - clase = "Card--player"
             include ../card/template.jade

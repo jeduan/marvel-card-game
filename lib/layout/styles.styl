@@ -1,62 +1,37 @@
 .Layout
     display flex
+    padding .5em
+    margin .5em
+    test(brown)
     flex-direction column
     min-height 100vh
     justify-content space-between
-    > *
-        margin 10px 
-        test()
+    background-image url('../images/city.jpg')
+    background-size cover
+    > section
+        margin .5em
     &-main
         display flex
-        test(green)
         justify-content space-between
-        padding .5em
     &-status
-    &-phases
+        test(green)
         width 200px
-        padding .5em
-        test(orange)
-    &-phases
-        width 0
+        
     &-battle
+        test(orange)
         flex 1
-        test(purple)
-        padding .5em
         margin 0 .5em
-        -webkit-perspective 400
-        -webkit-perspective-origin-y top
-        &Column
-            test()
-            margin .5em
-            background url('../images/pattern.jpg')
-            transform rotateX(10deg)
-            transform-origin top
-            display flex
-            flex-direction column
-            justify-content space-between
-            padding .5em
-        &Row
-            justify-content space-between
-            display flex
-            margin-bottom .5em
-            &:first-child 
-                transform rotate(180deg)
-            &:last-child
-                margin-bottom 0
-    &-antagonist
-        test(brown)
-        display flex
-        justify-content center
-        > *
-            test()
-            margin 10px
-            padding .5em
-    &-player
-        test(black)
-        display flex
-        justify-content center
+        background-image url('../images/pattern.jpg')
+    &-phases
+        test(purple)
+        width 200px
         position relative
-        > *
-            test()
-            margin 10px
-            padding .5em
+    &-antagonist
+        test(aquamarine)
+        display flex
+        justify-content space-between
+    &-player
+        test(gray)
+        display flex
+        justify-content space-between
+        
